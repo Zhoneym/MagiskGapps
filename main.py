@@ -3,7 +3,6 @@ import json
 import shutil
 import zipfile
 import fnmatch
-import pysftp
 import subprocess
 
 with open('module-info.json') as f:
@@ -14,10 +13,6 @@ version = contents['result']['version']
 versionCode = contents['result']['versionCode']
 author = contents['result']['author']
 description = contents['result']['description']
-SF_folder = contents['result']['SF_folder']
-SF_version = contents['result']['SF_version']
-SF_user = contents['result']['SF_user']
-SF_pass = contents['result']['SF_pass']
 
 # Create module.prop
 with open('template/module.prop', 'w') as f:
@@ -69,13 +64,3 @@ shutil.rmtree("builds", ignore_errors=True)
 os.remove("template/module.prop")
 os.remove("gapps.zip")
 shutil.rmtree("AppSet", ignore_errors=True)
-
-# Upload
-srv = pysftp.Connection(host="frs.sourceforge.net", username=SF_user, password=SF_pass)
-print("Uploading to SourceForge")
-
-with srv.cd('/home/frs/project/magiskgapps/'+SF_folder+'/'+SF_version): #chdir to public
-    srv.put('releases/MagiskGApps-'+ version +'.zip') #upload file to nodejs/
-
-# Closes the connection
-srv.close()
