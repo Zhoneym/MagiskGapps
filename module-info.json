@@ -1,14 +1,11 @@
 {
     "result" : 
         {
-            "id" : "Magisk-Gapps-V.VERSIONCODE",
-            "name" : "Magisk GApps ",
-            "version" : "VERSIONCODE",
-            "versionCode" : "7",
-            "author" : "Wacko1805",
-            "description" : "MagiskGApps Android ",
-            "SF_folder": "Sourceforge Folder",
-            "SF_version": "Sourceforge version",
-            "SF_user": "Sourceforge Username",
-            "SF_pass": "Sourceforge Password"
-    }}  
+            "id" : "MagiskGapps-V13.20230911",
+            "name" : "Magisk GApps",
+            "version" : "20230911",
+            "versionCode" : "13",
+            "author" : "Zhoneym",
+            "description" : "MagiskGApps Android"
+    }
+}  
