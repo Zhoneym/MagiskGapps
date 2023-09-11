@@ -2,10 +2,10 @@
     "result" : 
         {
             "id" : "MagiskGapps-V13.20230911",
-            "name" : "Magisk GApps",
+            "name" : "Magisk GApps ",
             "version" : "20230911",
             "versionCode" : "13",
             "author" : "Zhoneym",
-            "description" : "MagiskGApps Android"
+            "description" : "MagiskGApps Android "
     }
 }  
